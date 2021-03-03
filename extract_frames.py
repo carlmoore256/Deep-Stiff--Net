@@ -1,23 +1,9 @@
 import cv2
-import sys
-import numpy as np 
-#from matplotlib import pyplot as plt 
 import os
-import h5py
-import keras
-from keras.models import Sequential
-from keras.layers import Dense, Dropout, Activation, Flatten
-from keras.layers import Convolution2D, MaxPooling2D
-from sklearn.model_selection import train_test_split
-from keras.utils import plot_model
 
 ## extract frames from  video.
-
-## I select 130 frames out of 150 as first 10 and last 10 are useless for me.
-
-## Change if you dont like it
-frate=24
-delay= int(1000/24)
+# upper and lower bounds for frames
+frame_bounds = [10, 140]
 frame_list= [i for i in range(10,140)]
 if not os.path.exists("StiffImages"):
 	os.makedirs("StiffImages")

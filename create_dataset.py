@@ -8,23 +8,21 @@ import keras
 
 
 
- ## Creats dataset of images using cropped images
+ ## Creates dataset of images using cropped images
 
  # Outputs a 4d array with dimensions(number of images, image dimensions)
 
- ## Don't mess up with individual lines of code.
-
  ## feel free to change path names and texture dictionaries in case we render more videos
 def create_data():
-	path= 'CroppedImages'
-	files=os.listdir(path)
+	path = 'CroppedImages'
+	files = os.listdir(path)
 	print(files)
 	cnt=0
 	# length=5500
 	# label=np.zeros((length,))
 	#input_data=np.zeros((length,250,250,3))
 
-	diction= {"Bro":0, "Cotton":1,"FeltGreen": 2, "Sha":3,"Silk":4, "Sweater":5, "Fleece":6}
+	diction = {"Bro":0, "Cotton":1,"FeltGreen": 2, "Sha":3,"Silk":4, "Sweater":5, "Fleece":6}
 	a=[]
 	b=[]
 	c=[]
@@ -32,8 +30,8 @@ def create_data():
 
 	count=0
 	for label_idx, i in enumerate(files):
-		file_path=os.path.join(path,i)
-		new_files=os.listdir(file_path)
+		file_path = os.path.join(path,i)
+		new_files = os.listdir(file_path)
 
 
 		for idx, j in enumerate(new_files):
