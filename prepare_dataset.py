@@ -83,7 +83,7 @@ if __name__ == '__main__':
                     "Fleece":6
                  }
 
-    dataset_path = "/Volumes/RICO_III/ClothDataset/Final_Dataset_6sec"
+    dataset_path = "E:\Datasets\Final_Dataset_6sec"
     dataset_from_videos(dataset_path, 
                         label_dict,
-                        output_path="/Volumes/RICO_III/ClothDataset")
+                        output_path="E:\Datasets\ClothStiffnessDataset")
